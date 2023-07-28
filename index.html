@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather</title>
+  </head>
+
+  <body>
+    <div id="wrapper" class="wrapper">
+      <div class="jumpy-bars" id="jumpy-bars">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+        <div class="bar" id="bar4"></div>
+        <div class="bar" id="bar5"></div>
+        <div class="bar" id="bar6"></div>
+        <div class="bar" id="bar7"></div>
+      </div>
+      <div class="about-weather" id="about_weather">
+        <img id="weather_about_icon"></img>
+        <div class="about-weather-sub" id="about_weather_sub">
+          <p>Домен: <span id="weather_about_country"></span></p>
+          <p>Время восхода: <span id="weather_about_sunrise"></span>
+          </p>
+          <p>Время заката: <span id="weather_about_sunset"></span>
+          </p>
+        </div>
+      </div>
+      <form id="content" class="content" onsubmit="getWeatherBySearch()">
+        <div class="content-input">
+          <input placeholder="Введите город" id="input" class="input" />
+          <button id="button" class="button" type="submit">Get Weather</button>
+        </div>
+        <div class="all-content">
+          <div class="content-value">
+            <h2>Город: <span id="city"></span></h2>
+            <p>Температура: <span id="temp"></span></p>
+            <p>Максимальная<br> температура: <span id="max_temp"></span></p>
+            <p>Как ощущается: <span id="feel_temp"></span></p>
+            <p>Погода: <span id="weather_description"></span></p>
+            <p>Влажность: <span id="humidity"></span></p>
+            <p>Скорость ветра: <span id="wind_speed"></span></p>
+            <p>Дата: <span id="time"></span></p>
+          </div>
+          <div class="content-img">
+            <img src="" alt="" id="icon" />
+          </div>
+
+        </div>
+      </form>
+      <div class="days-content" id="days_content">
+        <div id="listWeather">
+          <div class="day-wrapper">
+            <p>Сегодня: </p>
+          </div>
+          <div class="day-wrapper">
+            <p>Завтра: </p>
+          </div>
+          <div class="day-wrapper">
+            <p>Через 3 дня: </p>
+          </div>
+          <div class="day-wrapper">
+            <p>Через 4 дня: </p>
+          </div>
+          <div class="day-wrapper">
+            <p>Через 5 дней: </p>
+          </div>
+        </div>
+        <div class="days-week" id="days_week"></div>
+      </div>
+    </div>
+    <!-- <div id="days" class="days"></div> -->
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
